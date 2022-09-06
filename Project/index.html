@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <!--
+    ==========================================
+                 Head
+    ==========================================
+    -->
+    <head>
+    <!--META-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Stronka na zaliczenie.">
+    <!--TYTUŁ-->
+        <title>Cuda Natury</title>
+    <!--ICONA-->
+        <link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/ikonka.png">
+    <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--RESPONSYWNOŚĆ-->
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!--SCRIPT-->       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 1){  
+                    $('header').addClass("sticky");
+                     $('header').removeClass("niesticky");
+                     $('#div_tresc').addClass("sticky");
+                     $('#div_tresc').removeClass("tresc1");
+                     
+                    }
+                else{
+                    $('header').removeClass("sticky");
+                    $('header').addClass("niesticky");
+                    $('#div_tresc').addClass("tresc1");
+                     $('#div_tresc').removeClass("sticky");
+                  
+                    }
+               });
+               function wlaczmenu(x) {
+                     x.classList.toggle("change");
+                {
+                 var v = document.getElementById("calemenu1");
+                if (v.className === "calemenu1") {
+                     v.className += " klik";
+                } else {
+                    v.className = "calemenu1";
+                }
+                }
+                }
+                
+        </script>
+    </head>
+       
+ 
+    <body>
+        
+        <header class="niesticky">
+            <div class="header1">
+
+                <img src="images/logo.png" alt="logo">
+                <span class="napis_logo">
+                    CUDA NATURY
+                </span>
+                
+                <div id="hamburger_switch" class="hamburger_switch" onclick="wlaczmenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <span id="calemenu1" class="calemenu1">
+                    <div id="calemenu" class="calemenu">
+                        <div id="menu1" class="menu1">
+                             <a href="index.html">Główna</a>
+                        </div>
+                        <div id="menu2" class="menu2">
+                            <a href="galeria.html">Galeria</a>
+                        </div>
+                        <div id="menu3" class="menu3">
+                            <a href="kontakt.html">Kontakt</a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </header>
+		<main>
+            <div id="div_tresc" class="tresc1">
+                    <h1 style="text-align: center; margin-bottom:150px;">CUDA NATURY</h1>
+                <div class="left">
+                    <h1>
+                        Wodospady
+                    </h1>
+                    <p>
+                        swobodny, pionowy spadek wody rzecznej, spowodowany istnieniem w korycie rzeki wyraźnego progu skalnego o wysokości od kilku do kilkuset metrów. ... Skały te, wymywane wolniej niż miękkie podłoże w dolnym biegu rzeki, tworzą stopień, z którego woda spada. Szereg wodospadów nazywa się kaskadą.
+                    </p>
+                </div>
+            </div>
+            <div class="page_banner1">
+                <div class="opacity">
+                    <h3>Wodospady</h3>
+                    <img src="images/waterfall.png">
+                </div> 
+            </div> 
+            <div id="div_tresc" class="tresc1">
+                <div class="right">
+                    <h1>
+                        Oceany
+                    </h1>
+                    <p>
+                        Morza i oceany zajmują 71% powierzchni naszej planety i pełnią kluczową rolę dla życia na Ziemi. Wytwarzają większość dostępnego tlenu oraz regulują klimat. Są domem dla tysięcy różnych gatunków zwierząt morskich. Pozwalają na utrzymanie różnych gałęzi gospodarki i dostarczają nam pożywienia.
+                    </p>
+                </div>
+            </div>
+            <div class="page_banner2">
+                <div class="opacity">
+                    <h3>Oceany</h3>
+                    <img src="images/water.webp">
+                </div> 
+            </div> 
+            <div id="div_tresc" class="tresc1">
+                <div class="left">
+                    <h1>
+                        Góry
+                    </h1>
+                    <p>
+                        wypukła forma ukształtowania terenu o wysokości względnej większej niż 300 m. W Europie za tereny górskie uważa się tereny położone powyżej 500 m n.p.m. lub według kryteriów anglosaskich powyżej 2000 stóp (609,6 m n.p.m.). Ze względu na wysokości bezwzględne wyróżnia się góry niskie, średnie i wysokie.
+                    </p>
+                    <article>
+                        <table class ='tabela tablecenter'>
+                            <caption>9 Największych szczytów</caption>
+                            
+                            <thead>
+                                <tr class ='tabela'></tr>
+                                    <th colspan="3">Najwyższe szczyty górskie</th>
+                                </tr>
+                                    <tr class ='tabela'>
+                                    <td class ='tabela'> &nbspNazwa szczytu  &nbsp</td>
+                                    <td class ='tabela'> &nbspWysokość &nbsp</td>
+                                    <td class ='tabela'> &nbspLokalizacja &nbsp</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class ='tabela'>
+                                    <td>Mount Everest</td>
+                                    <td>8848 m n.p.m.</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td> K2</td>
+                                    <td>8611 m n.p.m.</td>
+                                    <td>Karakorum</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td> Kanczendzonga </td>
+                                    <td>8586 m n.p.m</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td> Lhotse</td>
+                                    <td>8516 m n.p.m.</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td> Makalu </td>
+                                    <td>8463 m n.p.m.</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td>Czo Oju</td>
+                                    <td>8201 m n.p.m.</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td> Dhaulagiri</td>
+                                    <td>8167 m n.p.m.</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td> Manaslu</td>
+                                    <td>8156 m n.p.m.</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                                <tr class ='tabela'>
+                                    <td>Nanga Parbat </td>
+                                    <td>8126 m n.p.m.</td>
+                                    <td>Himalaje</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class ='tabela'>
+                                    <td class ='tabela' colspan="2">Łączna wysokość</td>
+                                    <td class ='tabela'>&nbsp75674 m n.p.m.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </article>   
+                </div>
+            </div>
+            <div class="page_banner3">
+                <div class="opacity">
+                    <h3>Góry</h3>
+                    <img src="images/mountains.png">
+                </div> 
+            </div> 
+        </main>
+		<footer>
+            <div class="footer1">
+                <div class="footer_1">
+                    <div class="flex1f">
+                        <p>O NAS</p>
+                        <p class="pp">
+                            Nasza strona przedstawia zdjęcia oraz informację na temat cudów natury. Powstała w celu edukowania zainteresowanej grupy osób. Mamy nadzieję ,że każdy znajdzie coś dla siebie!
+                        </p>
+                    </div>
+                    <div class="flex2f">
+                        <p>KONTAKT</p>
+                        <div class="kontakt1">
+                            <a href="#">Prasa</a>
+                        </div>
+                        <div class="kontakt2">
+                            <a href="#">Partnerzy</a>
+                        </div>
+                        <div class="kontakt3">
+                            <a href="#">Formularz kontaktowy</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer_2">
+                <div class="flex3f">
+                    <p>FAQ</p>
+                    <div class="faq1">
+                        <a href="#">Portal FAQs</a>
+                    </div>
+                    <div class="faq2">
+                        <a href="#">Kontakt z supportem</a>
+                    </div>
+                    <div class="faq3">
+                        
+                    </div>
+                
+                </div>
+                    <div class="flex4f">
+                        <p>MEDIA</p>
+                        <div class="flex4ff">
+                            <div class="social1">
+                                <a href="#" class="fa fa-facebook"></a>
+                            </div>
+                            <div class="social2">
+                                <a href="#" class="fa fa-twitter"></a>
+                            </div>
+                            <div class="social3">
+                                <a href="#" class="fa fa-google"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <img src="images/logo.png" alt="logo">
+                <div class="copy">
+                    &copy  Page was made by Strimii
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

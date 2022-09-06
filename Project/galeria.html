@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <!--
+    ==========================================
+                 Head
+    ==========================================
+    -->
+    <head>
+    <!--META-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Stronka na zaliczenie.">
+    <!--TYTUŁ-->
+        <title>Cuda Natury</title>
+    <!--ICONA-->
+        <link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/ikonka.png">
+    <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--RESPONSYWNOŚĆ-->
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!--SCRIPT-->       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 1){  
+                    $('header').addClass("sticky");
+                     $('header').removeClass("niesticky");
+                     $('#div_tresc').addClass("sticky");
+                     $('#div_tresc').removeClass("tresc1");
+                     
+                    }
+                else{
+                    $('header').removeClass("sticky");
+                    $('header').addClass("niesticky");
+                    $('#div_tresc').addClass("tresc1");
+                     $('#div_tresc').removeClass("sticky");
+                  
+                    }
+               });
+               function wlaczmenu(x) {
+                x.classList.toggle("change");
+                {
+                 var v = document.getElementById("calemenu1");
+                if (v.className === "calemenu1") {
+                     v.className += " klik";
+                } else {
+                     v.className = "calemenu1";
+                }
+                }
+                }
+
+                function powiekszimg(obj){
+                    var id = obj.id
+                    document.getElementById(id).style.width="400px";
+                    document.getElementById(id).style.height="340px";
+                    document.getElementById(id).style.position="absolute";
+                }
+                function oddalimg(obj){
+                    var id = obj.id
+                    document.getElementById(id).style.width="300px";
+                    document.getElementById(id).style.height="230px";
+                    setTimeout(function(){ document.getElementById(id).style.position="static"; }, 300);
+                }
+             
+                var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                function plusSlide(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function actSlide(n) {
+                    showSlides(slideIndex = n);
+                 }
+
+                
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("Slide");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }       
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                }   
+                
+                
+        </script>
+       
+    </head>
+       
+ 
+    <body>
+        
+        <header class="niesticky">
+            <div class="header1">
+
+                <img src="images/logo.png" alt="logo">
+                <span class="napis_logo">
+                    CUDA NATURY
+                </span>
+                
+                <div id="hamburger_switch" class="hamburger_switch" onclick="wlaczmenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <span id="calemenu1" class="calemenu1">
+                    <div id="calemenu" class="calemenu">
+                        <div id="menu1" class="menu1">
+                             <a href="index.html">Główna</a>
+                        </div>
+                        <div id="menu2" class="menu2">
+                            <a href="galeria.html">Galeria</a>
+                        </div>
+                        <div id="menu3" class="menu3">
+                            <a href="kontakt.html">Kontakt</a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </header>
+		<main>
+            <div id="div_tresc" class="tresc1" style="text-align:center;">
+                <h1>
+                    Galeria zdjęć
+
+                </h1>
+                <p>
+                    Zapraszamy do przeglądania!
+                </p>
+            </div>
+            <article>
+                <div class="slajder-kontener">
+
+                    <div class="Slide fade" style="display:block;">
+                        <div class="text_number">1 / 3</div>
+                        <img src="images/obraz1.jpg" style="width:100%">
+                        <div class="text">Zdjęcie 1</div>
+                    </div>
+                    
+                    <div class="Slide fade">
+                        <div class="text_number">2 / 3</div>
+                        <img src="images/obraz2.jpg" style="width:100%">
+                        <div class="text">Zdjęcie 2</div>
+                    </div>
+                    
+                    <div class="Slide fade">
+                        <div class="text_number">3 / 3</div>
+                        <img src="images/obraz3.jpg" style="width:100%">
+                        <div class="text">Zdjęcie 3</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlide(1)">&#10095;</a>
+                    
+                </div>
+
+                    <br>
+                    
+                <div class="dots">
+                    <span class="dot" onclick="actSlide(1)"></span> 
+                    <span class="dot" onclick="actSlide(2)"></span> 
+                    <span class="dot" onclick="actSlide(3)"></span> 
+                </div>
+            </article>
+            <article class="gallerycenter">
+                <div class="kontenerjpg"  id="imgd1">
+                    <img class ='imgkont' src='../Strona/images/cuda1.jpg' id="img1" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)" >
+                </div>
+                <div class="kontenerjpg" id="imgd2">
+                    <img class ='imgkont' src="../Strona/images/cuda2.jpg" id="img2" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)"> 
+                </div>
+                <div class="kontenerjpg" id="imgd3">
+                    <img class ='imgkont' src="../Strona/images/cuda2.png"  id="img3" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd4">
+                    <img class ='imgkont' src="../Strona/images/cuda3.jpg"  id="img4" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd5">
+                    <img class ='imgkont' src="../Strona/images/forforest.png"  id="img5" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd6">
+                    <img class ='imgkont' src="../Strona/images/mountains.png"  id="img6" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd7">
+                    <img class ='imgkont' src="../Strona/images/obraz1.jpg"  id="img7" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd8">
+                    <img class ='imgkont' src="../Strona/images/obraz2.jpg"  id="img8" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)"> 
+                </div>
+                <div class="kontenerjpg" id="imgd9">
+                    <img class ='imgkont' src="../Strona/images/obraz3.jpg"  id="img9" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd10">
+                    <img class ='imgkont' src="../Strona/images/obraz4.jpg"  id="img10" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd11">
+                    <img class ='imgkont' src="../Strona/images/obraz5.jpg"  id="img11" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+                <div class="kontenerjpg" id="imgd12">
+                    <img class ='imgkont' src="../Strona/images/obraz6.jpg"  id="img12" onmouseover="powiekszimg(this)" onmouseleave="oddalimg(this)">
+                </div>
+            </article>
+          
+        </main>
+		<footer>
+            <div class="footer1">
+                <div class="footer_1">
+                    <div class="flex1f">
+                        <p>O NAS</p>
+                        <p class="pp">
+                            Nasza strona przedstawia zdjęcia oraz informację na temat cudów natury. Powstała w celu edukowania zainteresowanej grupy osób. Mamy nadzieję ,że każdy znajdzie coś dla siebie!
+                        </p>
+                    </div>
+                    <div class="flex2f">
+                        <p>KONTAKT</p>
+                        <div class="kontakt1">
+                            <a href="#">Prasa</a>
+                        </div>
+                        <div class="kontakt2">
+                            <a href="#">Partnerzy</a>
+                        </div>
+                        <div class="kontakt3">
+                            <a href="#">Formularz kontaktowy</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer_2">
+                <div class="flex3f">
+                    <p>FAQ</p>
+                    <div class="faq1">
+                        <a href="#">Portal FAQs</a>
+                    </div>
+                    <div class="faq2">
+                        <a href="#">Kontakt z supportem</a>
+                    </div>
+                    <div class="faq3">
+                        
+                    </div>
+                
+                </div>
+                    <div class="flex4f">
+                        <p>MEDIA</p>
+                        <div class="flex4ff">
+                            <div class="social1">
+                                <a href="#" class="fa fa-facebook"></a>
+                            </div>
+                            <div class="social2">
+                                <a href="#" class="fa fa-twitter"></a>
+                            </div>
+                            <div class="social3">
+                                <a href="#" class="fa fa-google"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <img src="images/logo.png" alt="logo">
+                <div class="copy">
+                    &copy  Page was made by Strimii
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>
